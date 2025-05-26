@@ -1,0 +1,352 @@
+html{
+
+    scroll-behavior: smooth; /*desplazamiento suave*/
+}
+body{
+    margin: 0;
+    box-sizing: border-box;
+    padding: 0;
+    overflow-x: hidden;/*evitar el scroll horizontal*/
+    font-family: 'Roboto Condensed',sans-serif,'Helvetica Neue',Helvetica,Arial,sans-serif;
+}
+/* ------------------ header --------------------------------*/
+.bodyHeader{
+    display: flex;
+    justify-content: space-between;/*espacio entre los elementos*/
+    align-items: center;/*alinea los elementos al centro*/
+    background-color: #2087B4;
+    color: white;
+    padding: 3px 20px;
+    flex-wrap: wrap;/*si no hay espacio suficiente, los elementos se acomodan en la siguiente fila*/
+}
+/*logo image*/
+.headerLeft img{
+    width: 70px;
+}
+/*central menu*/
+.headerCenter ul{
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    gap: 30px;/*espacio entre los elementos*/
+}
+.headerCenter ul li a{
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+}
+.headerCenter ul li a:hover{
+    text-decoration: underline;
+}
+/*right menu*/
+.headerRight{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;/*si no hay espacio suficiente, los elementos se acomodan en la siguiente fila*/
+    max-width: 100%;
+}
+.headerRight input{
+    padding: 6px 10px;
+    border-radius: 5px;
+    border: none;
+    flex: 1 1 auto;
+    max-width: 100%;/*ancho maximo*/
+}
+
+/*cuerpo de la pagina*/
+main{
+    padding: 1rem;
+    margin:0 20%;
+}
+/*-------------productos--------------------------*/
+.product-title{
+    text-align: center;/*alinea el texto al centro*/
+}
+.product-title span{
+    display: inline-block;
+    transition: transform 0.3s ease-in-out;/*transicion suave*/
+}
+.product-title span:hover{
+    transform: scale(1.05);
+}
+#product-container{
+    display: flex;
+    margin-top: 2rem;
+    gap: 1rem;/*espacio entre los elementos*/
+    flex-wrap: wrap;/*si no entran en el tamaño de pagina actual pasan uno debajo del otro*/
+    justify-content: center;
+    padding-bottom: 1rem;
+}
+.product{
+    background-color: #f5f5f5;
+    border-radius: 10px;/*esquinas redondeadas*/
+    color: #6f8191;
+    width: 15rem;/*ancho de la tarjeta producto*/
+    height: 25rem;/*alto de la tarjeta producto*/
+    padding: 10px;
+    border: 1px solid #aaa;/*borde de la tarjeta producto*/
+    position: relative;
+    display: flex;
+    flex-direction: column;/*coloca los elementos uno debajo del otro*/
+}
+.product:hover{
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);/*sombra de la tarjeta producto*/
+    transform: scale(1.02);/*aumenta el tamaño de la tarjeta producto*/
+}
+.productRating{
+    display: flex;
+    align-items: center;
+    gap: 8px;/*espacio entre los elementos*/
+    margin-top: 1px;
+    margin-bottom: 4px;
+}
+.stars i{
+    color: #2087B4;
+}
+.productRating input{
+    width: 25px;
+    height: 25px;
+    text-align: center;
+    border: 1px solid #aaa;
+    border-radius: 4px;
+    font-weight: bold;
+    font-size: 14px;
+    background-color: #f2f2f2;
+    pointer-events: none; /*no editable*/
+}
+.product h5, h4, span{
+    margin: 0;
+    padding: 0;
+}
+.product h4{
+    /*descripcion producto*/
+    margin-top: 0.5rem;
+}
+.product span{
+    /*span precio*/
+    font-size: 1.2rem;
+    color: #239ACD;
+    margin-top: auto;
+    padding-top: 0.5rem;
+}
+/*------------reseñas-----------------*/
+.resenia-title{
+    text-align: center;/*alinea el texto al centro*/
+}
+.resenia-title span{
+    display: inline-block;
+    transition: transform 0.3s ease-in-out;/*transicion suave*/
+}
+.resenia-title span:hover{
+    transform: scale(1.05);
+}
+.resenias{
+    display: grid;/*separar en columnas*/
+    grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));/*auto ajustable, minimo 15rem, max el ancho disponible*/
+    gap: 1rem;/*espacio entre las columnas*/
+}
+.card{
+    border-radius: 5px;/*esquinas redondeadas*/
+    padding: 1rem;
+    max-width: 500px;
+    font-family: sans-serif;
+    background: #f5f5f5;
+}
+.card:hover{
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);/*sombra de la tarjeta reseña*/
+    transform: scale(1.02);/*aumenta el tamaño de la tarjeta reseña*/
+}
+.card-content{
+    display: flex;
+    flex-direction: column;/*coloca los elementos uno debajo del otro*/
+    gap: 0.5rem;/*espacio entre los elementos*/
+}
+.card-top{
+    display: flex;
+    justify-content: space-between;/*espacio entre los elementos*/
+    align-items: flex-start;/*alinea los elementos al inicio*/
+}
+.card-left{
+    display: flex;
+    flex-direction: column;/*coloca los elementos uno debajo del otro*/
+    gap: 4px;/*espacio entre los elementos*/
+}
+.card-stars{
+    color: #f0f036f1;
+    font-size: 20px;
+}
+.card-name{
+    font-weight: bold;
+    font-size: 16px;
+}
+.card-right{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    font-size: 0.85rem;
+}
+.card-label{
+    font-weight: bold;
+    color: #444;
+}
+.card-date{
+    color: #666;
+}
+.card-message{
+    margin-top: 2rem;
+    font-size: 0.95rem;
+    color: #444;
+}
+/*--------------formas de pago----------------*/
+.pay-title{
+    text-align: center;/*alinea el texto al centro*/
+}
+.pay-title span{
+    display: inline-block;
+    transition: transform 0.3s ease-in-out;/*transicion suave*/
+}
+.pay-title span:hover{
+    transform: scale(1.05);
+}
+.pay li{
+    list-style: none;
+    margin-bottom: 0.5rem;
+}
+.pay-container-top, .pay-container-bottom{
+    display: flex;/*coloca los elementos uno al lado del otro*/
+    gap: 0.5rem;/*espacio entre los elementos*/
+    flex-wrap: wrap;/*si no entran en el tamaño de pagina actual pasan uno debajo del otro*/
+    margin-bottom: 1.5rem;
+}
+.pay-money, .pay-mp{
+    text-align: center;
+    flex: 1;
+    min-width: 100px;
+    padding: 1rem;
+}
+
+.pay-credit{
+    padding: 1rem;
+    text-align: center;
+    max-width: 600px;
+    margin: 0 auto;/*centra el elemento*/
+}
+
+/*----------------------footer------------------------*/
+footer{
+    background-color: #f1f1f1;
+}
+.footer-content{
+    display: flex;
+    flex-wrap: wrap;/*si no hay espacio suficiente, los elementos se acomodan en la siguiente fila*/
+    justify-content: space-between;/*espacio entre los elementos*/
+    gap: 2rem;/*espacio entre los elementos*/
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1rem 3rem;
+}
+.footer-left,.footer-right{
+    flex: 1 1 1 300px;/*flexible, ocupa el 100% del ancho disponible*/
+}
+/*derecha form y social*/
+.contact-form{
+    display: flex;
+}
+.contact-form button{
+    background-color: #239ACD;
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;/*alto y ancho*/
+    border-radius: 4px;
+    cursor: pointer;
+}
+.contact-form input {
+    padding: 0.5rem;
+    margin-bottom: 0rem;
+    border: none;
+    border-radius: 4px;
+    flex: 1;
+}
+.footer-socials{
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    margin-top: 1rem;
+}
+.footer-socials a{
+    color: #737373;
+    font-size: 1.3rem;
+    transition: transform 0.3s;
+}
+.footer-socials a:hover{
+    transform: scale(1.2);/*aumenta el tamaño del icono*/
+}
+.footer-socials a:visited,
+.footer-socials a:focus,
+.footer-socials a:active{
+    outline: none;/*quita el borde azul*/
+    box-shadow: none;/*quita la sombra azul*/
+}
+
+.footer-back{
+    text-align: right;
+    gap: 2rem;/*espacio entre los elementos*/
+    font-size: 2rem;
+}
+.footer-back a{
+    color: #393939;
+    text-decoration: none;
+}
+.footer-back a:visited,
+.footer-back a:focus,
+.footer-back a:active{
+    outline: none;/*quita el borde azul*/
+    box-shadow: none;/*quita la sombra azul*/
+}
+.footer-bottom{
+    text-align: center;
+    padding: 0.5rem 0;
+    color: black;
+}
+
+/*------------------- responsive -------------------*/
+@media (max-width: 768px) {
+    .bodyHeader{
+        flex-direction: column;
+        align-items: stretch; /*alinea los elementos al centro*/
+    }
+    .headerLeft{
+        display: none;/*oculta el logo*/
+    }
+
+    .headerCenter ul{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;/*espacio entre los elementos*/
+        padding: 1rem; /*espacio entre el ultimo elemento del nav central y derecho*/
+    }
+
+    .headerRight{
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .headerRight button,
+    .headerRight input{
+        width: 100%;
+        min-width: 0;/*ancho minimo*/
+        max-width: 100%;/*ancho maximo*/
+        box-sizing: border-box;
+    }
+    .product-title{
+        display: none;
+    }
+
+    .card-right{
+        display: none;/*oculta la fecha de la reseña*/
+    }
+}
+ 
