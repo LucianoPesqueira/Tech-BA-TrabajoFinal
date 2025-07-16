@@ -38,7 +38,10 @@
             <button type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
             <input type="text" placeholder="Buscar...">
             <button type="submit"><i class="fa-solid fa-user"></i></button>
-            <button type="submit"><i class="fa-solid fa-cart-shopping"></i></button>
+            <button id="cart-shopping" type="submit">
+                <i class="fa-solid fa-cart-shopping">
+                <span id="cart-counter">0</span>
+            </i></button><!--boton carrito compras-->
         </div>
     </header>
 
@@ -49,139 +52,7 @@
         <section>
             <h2 class="product-title"><span>PRODUCTOS</span></h2>
             <div id="product-container">
-                <div class="product"><!--product 1-->
-                    <img src="image/zapatillas-de-running-adidas-response-super-negra.png"
-                        alt="Adidas response" width="200">
-                    <div class="productRating">
-                        <div class="stars">
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star"></i>
-                        </div>
-                        <input type="text" value="5.0" readonly>
-                    </div>
-                    <h5>Running</h5>
-                    <h4>Zapatilla de running Adidas Response super negra</h3>
-                        <span>precio: $95.500</span>
-                </div>
-                <div class="product"><!--product 2-->
-                    <img src="image/zapatillas-running-adidas-duramo-10-wide-mujer-negra.png"
-                        alt="Adidas duramo" width="200">
-                    <div class="productRating">
-                        <div class="stars">
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star"></i>
-                        </div>
-                        <input type="text" value="5.0" readonly>
-                    </div>
-                    <h5>Running</h5>
-                    <h4>Zapatilla de running Adidas duramo 10 wide de mujer</h4>
-                    <span>precio: $68.750</span>
-                </div>
-                <div class="product"><!--product 3-->
-                    <img src="image/zapatilla-adidas-mujer-switch-run-livianas.png"
-                        alt="Adidas switch run" width="200">
-                    <div class="productRating">
-                        <div class="stars">
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star-half-stroke"></i><!-- media estrella -->
-                            <i class="fa-regular fa-star"></i><!-- estrella vacia -->
-                        </div>
-                        <input type="text" value="3.5" readonly>
-                    </div>
-                    <h5>Running</h5>
-                    <h4>Zapatilla de running Adidas switch run livianas</h4>
-                    <span>precio: $58.790</span>
-                </div>
-                <div class="product"><!--product 4-->
-                    <img src="image/zapatillas-puma-caven-2-0.png" alt="Puma caven" width="200">
-                    <div class="productRating">
-                        <div class="stars">
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star"></i>
-                        </div>
-                        <input type="text" value="5.0" readonly>
-                    </div>
-                    <h5>Moda</h5>
-                    <h4>Zapatilla de moda Puma caven 2.0</h4>
-                    <span>precio: $83.750</span>
-                </div>
-                <div class="product"><!--product 5-->
-                    <img src="image/zapatilla-atomik-reece-mujer.png" alt="Atomic reece" width="200">
-                    <div class="productRating">
-                        <div class="stars">
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-regular fa-star"></i>
-                            <i class="fa-regular fa-star"></i>
-                            <i class="fa-regular fa-star"></i>
-                        </div>
-                        <input type="text" value="2.0" readonly>
-                    </div>
-                    <h5>Moda</h5>
-                    <h4>Zapatilla de moda Atomic reece de mujer</h4>
-                    <span>precio: $71.750</span>
-                </div>
-                <div class="product"><!--product 6-->
-                    <img src="image/zapatillas-adidas-response-mujer.png" alt="Adidas response"
-                        width="200">
-                    <div class="productRating">
-                        <div class="stars">
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star"></i>
-                        </div>
-                        <input type="text" value="5.0" readonly>
-                    </div>
-                    <h5>running</h5>
-                    <h4>Zapatilla de running Adidas response de mujer</h4>
-                    <span>precio: $80.500</span>
-                </div>
-                <div class="product"><!--product 7-->
-                    <img src="image/ojotas-adidas-adilette-aqua.png" alt="Adidas adilette"
-                        width="200">
-                    <div class="productRating">
-                        <div class="stars">
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star"></i>
-                        </div>
-                        <input type="text" value="5.0" readonly>
-                    </div>
-                    <h5>Moda</h5>
-                    <h4>Ojotas Adidas adilette aqua</h4>
-                    <span>precio: $50.000</span>
-                </div>
-                <div class="product"><!--product 8-->
-                    <img src="image/ojotas-salomon-rx-slide-3.png" alt="Salomon rx slide" width="200">
-                    <div class="productRating">
-                        <div class="stars">
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star-half-stroke"></i>
-                        </div>
-                        <input type="text" value="4.5" readonly>
-                    </div>
-                    <h5>Moda</h5>
-                    <h4>Ojotas Salomon rx slide 3</h4>
-                    <span>precio: $53.800</span>
-                </div>
+
             </div><!-- fin de product_container -->
         </section>
 
@@ -342,6 +213,12 @@
             <p>Desarrollado por: Luciano Nicolas Pesqueira</p>
         </div>
     </footer>
+    <!--carrito de compras, xDef:oculto-->
+    <div id="modal-cart" class="hidden">
+        
+    </div>
+    <!--carga de javascript-->
+    <script src="js/script.js"></script>
 </body>
 
 </html>

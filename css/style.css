@@ -131,6 +131,73 @@ main{
     margin-top: auto;
     padding-top: 0.5rem;
 }
+/*DIV PRECIO EN JS*/
+.priceButton{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+    font-size: 1.2rem;
+    color: #239ACD;
+    margin-top: auto;
+    padding-top: 0.5rem;
+}
+.btn-buy{
+    background-color: #2087B4;
+    color: white;
+    border: none;
+    padding: 6px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+.btn-buy i{
+    margin-left: 6px;
+}
+.btn-buy:hover {
+  background-color: #0731a3f1;
+}
+
+/*carrito*/
+.close-cart {
+    color: #239ACD;
+    border: none;
+    background: transparent;
+    font-size: 2rem;
+    cursor: pointer;
+}
+.cart-list li{
+    padding-bottom: 5px;
+}
+/*div botones carrito*/
+#operation-cart{
+    padding-bottom: 10px;
+}
+
+/*boton restar*/
+#btn-sub{
+    border: none;
+    cursor: pointer;
+    background: transparent;
+    font-size: 1rem;
+}
+/*boton sumar*/
+#btn-add{
+    border: none;
+    cursor: pointer;
+    background: transparent;
+    font-size: 1rem;
+    padding-left: 0.5px;
+}
+/*boton delete*/
+#btn-del{
+    border: none;
+    cursor: pointer;
+    background: transparent;
+    font-size: 1rem;
+    padding-left: 0.5px;
+}
+
 /*------------reseñas-----------------*/
 .resenia-title{
     text-align: center;/*alinea el texto al centro*/
@@ -309,6 +376,20 @@ footer{
     text-align: center;
     padding: 0.5rem 0;
     color: black;
+}
+/*----------------------carrito de compras------------------------*/
+#modal-cart{
+    position: absolute;
+    top: 90px;
+    right: 20px;
+    width: 300px;
+    background-color: white;
+    border: 1px solid #2087B4;
+    padding: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+.hidden{
+    display: none;
 }
 
 /*------------------- responsive -------------------*/
